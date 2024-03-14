@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nurofen</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @font-face {
+        font-family: 'Nurofen';
+        src: local('Nurofen'),
+          url('./fonts/NurofenText_Rg.otf') format('opentype'),
+          url('./fonts/NurofenText_Rg.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'NurofenBold';
+        src: local('NurofenBold'),
+          url('./fonts/NurofenText_Bd.otf') format('opentype'),
+          url('./fonts/NurofenText_Bd.woff2') format('woff2');
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #es-nurofen.es-nurofen {
+        font-family: 'Nurofen', 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.2;
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        color: #243045;
+        background-color: #eeeeee;
+      }
+      #es-nurofen.es-nurofen * {
+        box-sizing: border-box;
+      }
+      #es-nurofen.es-nurofen h2,
+      #es-nurofen.es-nurofen h3,
+      #es-nurofen.es-nurofen h4,
+      #es-nurofen.es-nurofen h5 {
+        font-family: 'Nurofen', 'Montserrat', sans-serif;
+        color: #243045;
+      }
+      #es-nurofen.es-nurofen .es-title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-family: 'NurofenBold', 'Montserrat', sans-serif;
+        letter-spacing: -1.5px;
+        word-spacing: 3px;
+        font-weight: 700;
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+      #es-nurofen.es-nurofen .es-kv {
+        padding-top: 10px;
+        background-color: #53b784;
+      }
+      #es-nurofen.es-nurofen .es-kv__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #es-nurofen.es-nurofen .es-kv__packshot {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-top: -35px;
+        margin-bottom: 20px;
+        -webkit-animation: slideright 0.5s ease-in-out;
+        animation: slideright 0.5s ease-in-out;
+      }
+      #es-nurofen.es-nurofen .es-kv__content-img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-right: 0;
+      }
+      #es-nurofen.es-nurofen .es-kv__title {
+        max-width: 90%;
+        font-size: 40px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-family: 'NurofenBold', 'Montserrat', sans-serif;
+        font-weight: bold;
+        -webkit-animation: slidedown 0.5s ease-in-out;
+        animation: slidedown 0.5s ease-in-out;
+      }
+      #es-nurofen.es-nurofen .es-kv__disclaimer {
+        max-width: 90%;
+        margin: 0 auto;
+        font-size: 12px;
+        color: #000000;
+        -webkit-animation: slidedown 0.5s ease-in-out;
+        animation: slidedown 0.5s ease-in-out;
+        line-height: 1;
+        font-weight: 400;
+        color: #243045;
+      }
+      #es-nurofen.es-nurofen .es-info {
+        background-color: #efefef;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+      #es-nurofen.es-nurofen .es-info__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+        margin-bottom: 20px;
+      }
+      #es-nurofen.es-nurofen .es-info__title {
+        max-width: 90%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 1.1;
+      }
+      #es-nurofen.es-nurofen .es-info__disclaimer {
+        max-width: 90%;
+        margin: 0 auto;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      #es-nurofen.es-nurofen .es-benefits {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #53b784;
+      }
+      #es-nurofen.es-nurofen .es-benefits__items {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      #es-nurofen.es-nurofen .es-benefits__item-img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        margin-bottom: 5px;
+      }
+      #es-nurofen.es-nurofen .es-benefits__item-title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        max-width: 200px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-family: 'NurofenBold', 'Montserrat', sans-serif;
+        font-size: 18px;
+        text-align: center;
+      }
+      #es-nurofen.es-nurofen .es-benefits__disclaimer {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        max-width: 200px;
+        margin: 0 auto;
+        font-size: 12px;
+        text-align: center;
+      }
+      #es-nurofen.es-nurofen .es-additional {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #efefef;
+      }
+      #es-nurofen.es-nurofen .es-additional__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+      }
+      #es-nurofen.es-nurofen .es-additional__item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #fff;
+        border: 2px solid #c4c4c4;
+      }
+      #es-nurofen.es-nurofen .es-additional__text-group {
+        margin-bottom: 20px;
+      }
+      #es-nurofen.es-nurofen .es-additional__item-title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-family: 'NurofenBold', 'Montserrat', sans-serif;
+        letter-spacing: -1.5px;
+        word-spacing: 3px;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      #es-nurofen.es-nurofen .es-additional__item-description {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+      }
+      #es-nurofen.es-nurofen .es-additional__item-img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 200px;
+      }
+      #es-nurofen.es-nurofen .es-action {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #53b784;
+        margin-bottom: 10px;
+      }
+      #es-nurofen.es-nurofen .es-action__text {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+      }
+      #es-nurofen.es-nurofen .es-action__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      #es-nurofen.es-nurofen .es-cross {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 10px;
+        background-color: #53b784;
+        position: relative;
+      }
+      #es-nurofen.es-nurofen .es-cross__title {
+        margin-bottom: 0;
+        font-family: 'NurofenBold', 'Montserrat', sans-serif;
+        letter-spacing: -1.5px;
+        word-spacing: 3px;
+        font-weight: 700;
+        position: relative;
+        z-index: 1;
+      }
+      #es-nurofen.es-nurofen .es-cross__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #es-nurofen.es-nurofen .es-cross__link {
+        text-decoration: none;
+        color: inherit;
+      }
+      #es-nurofen.es-nurofen .es-cross__img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 80%;
+        margin-bottom: 20px;
+      }
+      #es-nurofen.es-nurofen .es-cross__item-title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        max-width: 200px;
+        margin: 0 auto;
+        font-family: 'NurofenBold', 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      #es-nurofen.es-nurofen .es-footer {
+        padding-top: 20px;
+        padding-bottom: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #eeeeee;
+      }
+      #es-nurofen.es-nurofen .es-footer__logo-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+      }
+      #es-nurofen.es-nurofen .es-footer__logo-title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        text-align: center;
+      }
+      #es-nurofen.es-nurofen .es-footer__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      #es-nurofen.es-nurofen .es-footer__item-img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 150px;
+      }
+      #es-nurofen.es-nurofen .es-footer__disclaimer {
+        padding: 20px 10px;
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        background-color: #53b784;
+        text-align: center;
+        line-height: 1.2;
+      }
+      #es-nurofen.es-nurofen .es-footer__disclaimer-title {
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        display: block;
+        font-family: 'Nurofen', 'Montserrat', sans-serif;
+        text-align: center;
+      }
+      #es-nurofen.es-nurofen .es-footnotes {
+        background-color: #fff;
+      }
+      #es-nurofen.es-nurofen .es-footnotes__list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 30px;
+      }
+      #es-nurofen.es-nurofen .es-footnotes__item {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      #es-nurofen.es-nurofen .es-footnotes__item p {
+        margin-top: 0;
+        font-size: 11px;
+      }
+      @media screen and (min-width: 500px) {
+        #es-nurofen.es-nurofen .es-kv__packshot {
+          max-width: 400px;
+        }
+        #es-nurofen.es-nurofen .es-info__img {
+          max-width: 400px;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item-img {
+          max-width: 300px;
+        }
+        #es-nurofen.es-nurofen .es-cross__img {
+          max-width: 300px;
+        }
+      }
+      @media screen and (min-width: 550px) {
+        #es-nurofen.es-nurofen .es-kv__title {
+          font-size: 35px;
+        }
+      }
+      @media screen and (min-width: 600px) {
+        #es-nurofen.es-nurofen .es-title {
+          font-size: 31px;
+          margin-top: 10px;
+          margin-bottom: 0;
+        }
+        #es-nurofen.es-nurofen .es-kv {
+          display: flex;
+          flex-direction: row;
+          padding-bottom: 20px;
+          gap: 30px;
+        }
+        #es-nurofen.es-nurofen .es-kv__title {
+          max-width: 300px;
+          margin-left: 20px;
+          font-size: 40px;
+          line-height: 0.9;
+        }
+        #es-nurofen.es-nurofen .es-kv__packshot {
+          max-width: 330px;
+          margin-left: -10px;
+        }
+        #es-nurofen.es-nurofen .es-kv__title {
+          max-width: 300px;
+          margin-left: 45px;
+          font-size: 49px;
+          line-height: 0.9;
+        }
+        #es-nurofen.es-nurofen .es-kv__content-img {
+          margin-bottom: -20px;
+          margin-left: -30px;
+          margin-top: -10px;
+          height: 382px;
+          align-self: flex-end;
+        }
+        #es-nurofen.es-nurofen .es-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        #es-nurofen.es-nurofen .es-info__img {
+          margin-bottom: 0;
+        }
+        #es-nurofen.es-nurofen .es-info__title {
+          max-width: 100%;
+        }
+        #es-nurofen.es-nurofen .es-info__disclaimer {
+          max-width: 100%;
+        }
+        #es-nurofen.es-nurofen .es-benefits__items {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item {
+          max-width: 175px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          position: relative;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item-img {
+          max-width: 150px;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item-img--1 {
+          margin-bottom: 20px;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item-img--2 {
+          margin-bottom: 20px;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item-img--3 {
+          min-height: 106px;
+          margin-bottom: 20px;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item-title {
+          font-size: 20px;
+          min-height: 76px;
+          margin-bottom: 0;
+        }
+        #es-nurofen.es-nurofen .es-benefits__disclaimer {
+          font-size: 9px;
+        }
+        #es-nurofen.es-nurofen .es-benefits__disclaimer--2 {
+          z-index: 1;
+          position: absolute;
+          bottom: 5%;
+        }
+        #es-nurofen.es-nurofen .es-action {
+          padding-bottom: 10px;
+          padding-top: 10px;
+          padding-left: 20px;
+        }
+        #es-nurofen.es-nurofen .es-action__title {
+          font-family: 'NurofenBold', 'Montserrat', sans-serif;
+          letter-spacing: -1.5px;
+          word-spacing: 3px;
+          font-weight: 700;
+          margin-top: 10px;
+        }
+        #es-nurofen.es-nurofen .es-action__content {
+          display: flex;
+          justify-content: center;
+        }
+        #es-nurofen.es-nurofen .es-action__img {
+          max-width: 350px;
+          margin-top: -57px;
+          margin-left: 70px;
+        }
+        #es-nurofen.es-nurofen .es-cross__title {
+          margin-top: 0;
+        }
+        #es-nurofen.es-nurofen .es-cross__items {
+          display: flex;
+          flex-direction: row;
+        }
+        #es-nurofen.es-nurofen .es-cross__item {
+          transition: all 0.3s ease-in-out;
+        }
+        #es-nurofen.es-nurofen .es-cross__item-title--second {
+          max-width: 300px;
+        }
+        #es-nurofen.es-nurofen .es-cross__item:hover {
+          transform: scale(1.1);
+        }
+        #es-nurofen.es-nurofen .es-cross__img {
+          max-width: 200px;
+        }
+        #es-nurofen.es-nurofen .es-cross__item-title {
+          font-size: 21px;
+        }
+        #es-nurofen.es-nurofen .es-additional__title {
+          margin-bottom: 10px;
+        }
+        #es-nurofen.es-nurofen .es-additional__item {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center;
+          max-width: 90%;
+          padding-top: 0;
+          padding-bottom: 0;
+          margin-left: 10px;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
+        #es-nurofen.es-nurofen .es-additional__item-img {
+          align-self: flex-end;
+          margin-right: -10%;
+          max-width: 200px;
+        }
+        #es-nurofen.es-nurofen .es-footer__logo-group {
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: flex-start;
+        }
+        #es-nurofen.es-nurofen .es-footer__item {
+          justify-content: flex-start;
+        }
+        #es-nurofen.es-nurofen .es-footer__logo-title {
+          max-width: 250px;
+        }
+        #es-nurofen.es-nurofen .es-footer__item-img--2 {
+          max-height: 128px;
+        }
+        #es-nurofen.es-nurofen .es-footer__disclaimer {
+          font-size: 28px;
+        }
+        #es-nurofen.es-nurofen .es-footer__disclaimer-title {
+          font-size: 35px;
+          font-weight: normal;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        #es-nurofen.es-nurofen .es-cross__img {
+          max-width: 250px;
+        }
+        #es-nurofen.es-nurofen .es-footer {
+          padding-bottom: 20px;
+        }
+        #es-nurofen.es-nurofen .es-footer__logo-group {
+          margin-top: 10px;
+        }
+        #es-nurofen.es-nurofen .es-footer__item {
+          flex-direction: row;
+          align-items: flex-start;
+        }
+        #es-nurofen.es-nurofen .es-footer__logo-title {
+          margin-top: 20px;
+          max-width: 300px;
+          text-align: left;
+          font-size: 14px;
+        }
+        #es-nurofen.es-nurofen .es-footer__disclaimer {
+          font-size: 30px;
+          padding: 20px 100px;
+          padding-bottom: 0;
+        }
+        #es-nurofen.es-nurofen .es-kv {
+          position: relative;
+        }
+        #es-nurofen.es-nurofen .es-kv__disclaimer {
+          position: absolute;
+          bottom: 2%;
+          left: 4.4%;
+          max-width: 373px;
+        }
+        #es-nurofen.es-nurofen .es-kv__packshot {
+          margin-top: -35px;
+          margin-left: 0px;
+          margin-bottom: 5px;
+        }
+        #es-nurofen.es-nurofen .es-kv__title {
+          position: absolute;
+        }
+        #es-nurofen.es-nurofen .es-kv__title {
+          position: relative;
+          z-index: 1;
+        }
+      }
+      @media screen and (min-width: 930px) {
+        #es-nurofen.es-nurofen .es-benefits__item {
+          justify-content: flex-start;
+          max-width: 250px;
+          transition: all 0.3s ease-in-out;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item:hover {
+          transform: scale(1.1);
+        }
+        #es-nurofen.es-nurofen .es-benefits__item-img {
+          max-width: 95px;
+        }
+
+        #es-nurofen.es-nurofen .es-benefits__item-img--3 {
+          max-width: none;
+          max-height: 106px;
+              margin-top: -22px;
+        }
+
+                  
+        #es-nurofen.es-nurofen .es-benefits__item-img--2{
+          max-width: 155px;
+        }
+        #es-nurofen.es-nurofen .es-benefits__item-title {
+          min-height: 60px;
+        }
+
+        #es-nurofen.es-nurofen .es-benefits__item-title--2 {
+          min-width: 275px;
+        }
+        #es-nurofen.es-nurofen .es-action__content {
+          justify-content: space-around;
+        }
+        #es-nurofen.es-nurofen .es-action__text {
+          margin-top: 10px;
+          max-width: 270px;
+        }
+        #es-nurofen.es-nurofen .es-action__img {
+          max-width: 400px;
+        }
+        #es-nurofen.es-nurofen .es-info__title {
+          margin-top: 6px;
+          margin-right: 56px;
+          margin-bottom: 5px;
+          font-size: 30px;
+        }
+        #es-nurofen.es-nurofen .es-additional__item {
+          padding-left: 20px;
+        }
+        #es-nurofen.es-nurofen .es-additional__item-title {
+          margin-bottom: 0;
+          font-size: 26px;
+        }
+        #es-nurofen.es-nurofen .es-additional__item-description {
+          font-size: 15.8px;
+        }
+        #es-nurofen.es-nurofen .es-footer,
+        #es-nurofen.es-nurofen .es-additional,
+        #es-nurofen.es-nurofen .es-benefits,
+        #es-nurofen.es-nurofen .es-cross,
+        #es-nurofen.es-nurofen .es-action {
+          padding-left: 20px;
+        }
+
+        #es-nurofen.es-nurofen .es-footer__title,
+        #es-nurofen.es-nurofen .es-additional__title,
+        #es-nurofen.es-nurofen .es-benefits__title,
+        #es-nurofen.es-nurofen .es-cross__title,
+        #es-nurofen.es-nurofen .es-action__title {
+          padding-left: 10px;
+        }
+        #es-nurofen.es-nurofen .es-additional__title {
+          font-size: 30px;
+        }
+        #es-nurofen.es-nurofen .es-footer__disclaimer {
+          margin-top: 30px;
+        }
+        #es-nurofen.es-nurofen .es-info__img {
+          max-width: 276px;
+          margin-left: 10px;
+        }
+        #es-nurofen.es-nurofen .es-action__text {
+          margin-left: 18px;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+        #es-nurofen.es-nurofen .es-additional__item {
+          max-width: 91%;
+        }
+        #es-nurofen.es-nurofen .es-cross {
+          padding-bottom: 0;
+        }
+        #es-nurofen.es-nurofen .es-cross__items {
+          margin-top: -40px;
+        }
+        #es-nurofen.es-nurofen .es-footnotes__list {
+          flex-direction: row;
+          gap: 30px;
+          word-break: break-all;
+          text-align: justify;
+        }
+        #es-nurofen.es-nurofen .es-footnotes__item {
+          max-width: 32%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+
+      @-webkit-keyframes appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @-webkit-keyframes slidedown {
+        from {
+          opacity: 0;
+          transform: translateY(-32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slidedown {
+        from {
+          opacity: 0;
+          transform: translateY(-32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @-webkit-keyframes slideright {
+        from {
+          opacity: 0.3;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes slideright {
+        from {
+          opacity: 0.3;
+          transform: translateX(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @-webkit-keyframes slideleft {
+        from {
+          opacity: 0.3;
+          transform: translateX(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes slideleft {
+        from {
+          opacity: 0.3;
+          transform: translateX(100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="es-nurofen" id="es-nurofen">
+      <section class="es-kv">
+        <div class="es-kv__content">
+          <img
+            class="es-kv__packshot"
+            src="./images/packshot-glow.webp"
+            alt="Nurofen Express Forte"
+          />
+          <p class="es-kv__title">
+            Ekspert <br />w walce  <br />z bólem
+          </p>
+        </div>
+        <img
+          class="es-kv__content-img"
+          src="./images/kv-bg.webp"
+          alt="Kobieta"
+        />
+      </section>
+
+      <section class="es-info">
+        <img
+          class="es-info__img"
+          src="./images/info-image.webp"
+          alt="Nurofen Express Forte 20"
+        />
+        <div class="es-info__content">
+          <p class="es-info__title">
+            Precyzyjnie uderza w ból,  <br />
+            eliminując jego przyczynę <br />
+          </p>
+        </div>
+      </section>
+
+      <section class="es-benefits">
+        <p class="es-benefits__title es-title">KORZYŚCI</p>
+
+        <div class="es-benefits__items">
+          <div class="es-benefits__item">
+            <img
+              class="es-benefits__item-img es-benefits__item-img--1"
+              src="./images/benefits-1.webp"
+              alt="Substancja przeciwbólowa"
+            />
+            <p class="es-benefits__item-title es-benefits__item-title--2">
+              DZIAŁA PRZECIWBÓLOWO, 
+              <br>
+              PRZECIWZAPALNIE 
+              <br>
+              I PRZECIWGORĄCZKOWO
+            </p>
+          </div>
+
+          <div class="es-benefits__item">
+            <img
+              class="es-benefits__item-img es-benefits__item-img--2"
+              src="./images/benefits-2.webp"
+              alt="Działa 2 razy szybciej"
+            />
+            <p class="es-benefits__item-title">
+              DZIAŁA <br />
+              Z PODWÓJNĄ SIŁĄ*
+            </p>
+            <p class="es-benefits__disclaimer es-benefits__disclaimer--2">
+              *W porównaniu do Nurofenu 200mg
+            </p>
+          </div>
+
+          <div class="es-benefits__item es-benefits__item--3">
+            <img
+              class="es-benefits__item-img es-benefits__item-img--3"
+              src="./images/benefits-3.webp"
+              alt="OD 12."
+            />
+            <p class="es-benefits__item-title">OD 12. <br>ROKU ŻYCIA</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-additional">
+        <p class="es-additional__title es-title">
+          DOWIEDZ SIĘ WIĘCEJ O BÓLACH GŁOWY
+        </p>
+        <div class="es-additional__items">
+          <div class="es-additional__item">
+            <div class="es-additional__text-group">
+              <p class="es-additional__item-title">ZATOKOWE BÓLE GŁOWY</p>
+              <p class="es-additional__item-description">
+                Zatokowe bóle głowy mogą występować w wyniku zapalenia zatok
+                i&nbsp;nagromadzenia się wydzielin. Powoduje to uczucie ucisku i
+                bólu w kościach policzkowych, czole i wokół oczu.
+              </p>
+            </div>
+            <img
+              class="es-additional__item-img"
+              src="./images/add-1.webp"
+              alt="Zatokowe bóle głowy"
+            />
+          </div>
+
+          <div class="es-additional__item">
+            <div class="es-additional__text-group">
+              <p class="es-additional__item-title">NAPIĘCIOWE BÓLE GŁOWY</p>
+              <p class="es-additional__item-description">
+                Napięciowy ból głowy ma charakter ciągły. Może mu towarzyszyć
+                odczucie&nbsp;ściskania głowy lub narastającego w niej
+                ciśnienia.
+              </p>
+            </div>
+            <img
+              class="es-additional__item-img"
+              src="./images/add-2.webp"
+              alt="Zatokowe bóle głowy"
+            />
+          </div>
+
+          <div class="es-additional__item">
+            <div class="es-additional__text-group">
+              <p class="es-additional__item-title">MIGRENY</p>
+              <p class="es-additional__item-description">
+                Szeroki zakres objawów migreny może obejmować pulsujący ból po
+                jednej&nbsp;lub obu stronach głowy oraz wrażliwość na światło
+                lub dźwięk. Jest&nbsp;kilka rzeczy, które możesz zrobić, aby
+                zapobiec wystąpieniu bólu głowy.&nbsp;Są też sposoby na
+                złagodzenie objawów, jeśli już wystąpią.
+              </p>
+            </div>
+            <img
+              class="es-additional__item-img"
+              src="./images/add-3.webp"
+              alt="Zatokowe bóle głowy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="es-action">
+        <p class="es-action__title es-title">SPOSÓB DZIAŁANIA</p>
+        <div class="es-action__content">
+          <div class="es-action__text">
+            Ibuprofen po podaniu wchłania się 
+            szybko i ulega szybkiemu 
+            rozprowadzeniu w organizmie.
+          </div>
+          <img
+            class="es-action__img"
+            src="./images/action.webp"
+            alt="Sposób działania"
+          />
+        </div>
+      </section>
+
+      <section class="es-cross">
+        <p class="es-cross__title es-title">POZNAJ INNE PRODUKTY NUROFEN</p>
+        <div class="es-cross__items">
+          <div class="es-cross__item">
+            <a
+              class="es-cross__link"
+              href="https://www.apteka-melissa.pl/produkt/nurofen-forte-24-tabl,502.html"
+              target="_blank"
+            >
+              <img
+                class="es-cross__img"
+                src="./images/cross-1-glow.webp"
+                alt="NUROFEN FORTE 48"
+              />
+              <p class="es-cross__item-title">
+                NUROFEN FORTE <br />24 TABLETKI POWLEKANYCH
+              </p>
+            </a>
+          </div>
+
+          <div class="es-cross__item es-cross__item--second">
+            <a
+              class="es-cross__link"
+              href="https://www.apteka-melissa.pl/produkt/nurofen-express-forte-30-kaps,40591.html"
+              target="_blank"
+            >
+              <img
+                class="es-cross__img"
+                src="./images/cross-2-glow.webp"
+                alt="NUROFEN EXPRESS FORTE 30"
+              />
+              <p class="es-cross__item-title es-cross__item-title--second">
+                NUROFEN <br />EXPRESS FORTE <br />30 KAPSUŁEK MIĘKKICH
+              </p>
+            </a>
+          </div>
+
+          <div class="es-cross__item">
+            <a class="es-cross__link" href="#" target="_blank">
+              <img
+                class="es-cross__img"
+                src="./images/cross-3-glow.webp"
+                alt="NUROFEN ZATOKI 24 SZT"
+              />
+              <p class="es-cross__item-title">
+                NUROFEN ZATOKI <br />24 TABLETKI POWLEKANE
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="es-footer">
+        <p class="es-footer__title es-title">DLACZEGO NUROFEN?</p>
+
+        <div class="es-footer__content">
+          <div class="es-footer__logo-group">
+            <div class="es-footer__item">
+              <img
+                class="es-footer__item-img"
+                src="./images/60-years.webp"
+                alt="Logotyp 60 lat"
+              />
+              <div class="es-footer__logo-title">
+                Ponad <b>60 lat</b> doświadczenia marki
+              </div>
+            </div>
+
+            <div class="es-footer__item">
+              <img
+                class="es-footer__item-img es-footer__item-img--2"
+                src="./images/icon.webp"
+                alt="Logotyp Nurofen"
+              />
+              <div class="es-footer__logo-title">
+                Nurofen zawiera ibuprofen, który ma&nbsp;właściwości
+                <b>przeciwzapalne</b> i&nbsp;pomaga złagodzić ból u źródła,
+                poprzez&nbsp;zmniejszenie stanu zapalnego
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="es-footer__disclaimer">
+          <span class="es-footer__disclaimer-title">OSTRZEŻENIE</span>
+          To jest lek. Dla bezpieczeństwa stosuj go zgodnie z ulotką dołączoną
+          do opakowania. Nie przekraczaj maksymalnej dawki leku.
+          W&nbsp;przypadku wątpliwości skonsultuj się z&nbsp;lekarzem lub
+          farmaceutą.
+        </p>
+      </section>
+
+      <section class="es-footnotes">
+        <div class="es-footnotes__list">
+          <div class="es-footnotes__item">
+            <p lang="pl">
+              <b>Nurofen Forte, 400 mg, tabletki powlekane. </b><br />Jedna
+              tabletka powlekana zawiera 400 mg ibupro-<br />fenu (Ibuprofenum).
+              Wskazania do stosowania:<br />
+              bóle różnego pochodzenia o nasileniu słabym do
+              <br />umiarkowanego: bóle głowy, np. migrena; bóle <br />okolicy
+              krzyżowej; bóle zębów, np. po ekstrakcji <br />zębów; nerwobóle;
+              bóle mięśni i stawów; bolesne <br />miesiączkowanie. Gorączka w
+              przebiegu grypy <br />i przeziębienia. Podmiot odpowiedzialny:
+              Reckitt <br />Benckiser (Poland) S.A.
+            </p>
+          </div>
+          <div class="es-footnotes__item">
+            <p lang="pl">
+              <b>Nurofen Express Forte, 400 mg, kapsułki, mięk-<br />kie.</b>
+              Każda kapsułka miękka zawiera 400 mg <br />ibuprofenu
+              (Ibuprofenum). Wskazania do stosowa-<br />nia: Produkt leczniczy
+              przeznaczony jest do stoso-<br />wania u dorosłych oraz dzieci i
+              młodzieży o masie <br />ciała powyżej 40 kg (12 lat i powyżej) w
+              krótkotrwa-<br />łym objawowym leczeniu łagodnego i umiarkowa-<br />nego
+              bólu, takiego jak ból głowy, bóle miesiączko-<br />we, ból zębów
+              oraz gorączka i ból związany <br />z przeziębieniem. Podmiot
+              odpowiedzialny: Reckitt <br />Benckiser (Poland) S.A.
+            </p>
+          </div>
+          <div class="es-footnotes__item">
+            <p lang="pl">
+              <b>Nurofen Zatoki, 200 mg +30 mg, tabletki powleka-<br />ne. </b>
+              Jedna tabletka zawiera 200 mg ibuprofenu <br />(Ibuprofenum) i 30
+              mg pseudoefedryny chlorowo-<br />dorku (Pseudoephedrini
+              hydrochloridum). Wskazania <br />do stosowania: doraźnie w celu
+              złagodzenia objawów <br />niedrożności nosa i zatok obocznych nosa
+              z towarzy-<br />szącym bólem głowy, bólów związanych z
+              niedrożno-<br />ścią zatok oraz gorączką w przebiegu grypy lub<br />
+              przeziębienia. Podmiot odpowiedzialny: Reckitt <br />Benckiser
+              (Poland) S.A.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
